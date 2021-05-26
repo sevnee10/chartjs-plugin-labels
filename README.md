@@ -14,14 +14,7 @@ You can put the below link in the script tag
     https://cdn.jsdelivr.net/gh/emn178/chartjs-plugin-labels/src/chartjs-plugin-labels.js
 
 ## Installation
-You can also install chartjs-plugin-labels by using Bower.
-
-    bower install chartjs-plugin-labels
-
-
-Or node.js, you can use this command to install:
-
-    npm install chartjs-plugin-labels
+- `npm i chartjs-plugin-labels`
 
 ## Notice
 v1.0.0 has breaking changes. Please see [CHANGELOG v1.0.0](https://github.com/emn178/chartjs-plugin-labels/blob/master/CHANGELOG.md#v170--2018-08-19)  
