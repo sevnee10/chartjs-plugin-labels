@@ -190,7 +190,7 @@ import Chart, { helpers } from 'chart.js';
   };
 
   Label.prototype.shouldRenderToElement = function (meta, element) {
-    return !meta.hidden && !element.hidden && (
+    return !meta.hidden && (
       this.options.showZero ||
         this.chart.config.type === 'polarArea' ? element.outerRadius !== 0 : element.circumference !== 0
     );
