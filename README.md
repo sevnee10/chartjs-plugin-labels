@@ -1,4 +1,4 @@
-# chartjs-plugin-labels v3
+# chart.js-plugin-labels for Chart.js v3
 [Chart.js](https://www.chartjs.org/) plugin to display labels on pie, doughnut and polar area chart. 
 
 ## Demo
@@ -14,7 +14,7 @@ You can put the below link in the script tag
     https://cdn.jsdelivr.net/gh/DavideViolante/chartjs-plugin-labels/src/chartjs-plugin-labels.js
 
 ## Installation
-- `npm i chartjs-plugin-labels-new`
+- `npm i chart.js-plugin-labels`
 
 ## Usage
 JavaScript
