@@ -5,13 +5,13 @@
 - [Demo](http://emn178.github.io/chartjs-plugin-labels/samples/demo/)
 
 ## Download
-- [Compressed](https://raw.github.com/DavideViolante/chartjs-plugin-labels/master/build/chartjs-plugin-labels.min.js)  
+- [Compressed](https://raw.github.com/DavideViolante/chartjs-plugin-labels/master/dist/chartjs-plugin-labels.min.js)  
 - [Uncompressed](https://raw.github.com/DavideViolante/chartjs-plugin-labels/master/src/chartjs-plugin-labels.js)
 
 ## CDN Link
 You can put the below link in the script tag
 
-    https://cdn.jsdelivr.net/gh/DavideViolante/chartjs-plugin-labels/src/chartjs-plugin-labels.js
+    https://unpkg.com/chart.js-plugin-labels-dv/dist/chartjs-plugin-labels.min.js
 
 ## Installation
 - `npm i chart.js-plugin-labels-dv`
@@ -142,15 +142,20 @@ Chart.defaults.global.plugins.labels = {
 };
 ```
 
-### For Angular 2+
+### Angular 2+
+```
+import Chart from 'chart.js/auto';
+import 'chart.js-plugin-labels-dv';
+```
+
 If you use [angular2-chartjs](https://github.com/emn178/angular2-chartjs), you can import by this:
 ```
 import { ChartModule } from 'angular2-chartjs';
-import 'chartjs-plugin-labels';
+import 'chart.js-plugin-labels-dv';
 ```
 
 ## License
-The project is released under the [MIT license](http://www.opensource.org/licenses/MIT).
+[MIT license](http://www.opensource.org/licenses/MIT).
 
 ## Contact
 The project's website is located at https://github.com/emn178/chartjs-plugin-labels  
