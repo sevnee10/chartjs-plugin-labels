@@ -1,31 +1,29 @@
 /**
- * [chartjs-plugin-labels]{@link https://github.com/emn178/chartjs-plugin-labels}
+ * [chartjs-plugin-labels]{@link https://github.com/DavideViolante/chartjs-plugin-labels}
  *
- * @version 1.1.0
- * @author Chen, Yi-Cyuan [emn178@gmail.com]
+ * @version 3.0.0
+ * @author Chen, Yi-Cyuan [emn178@gmail.com], Davide Violante
  * @copyright Chen, Yi-Cyuan 2017-2018
  * @license MIT
  */
-
-import Chart, { helpers } from 'chart.js';
 
 (function () {
   'use strict';
 
   if (typeof Chart === 'undefined') {
-    console.error('Can not find Chart object.');
+    console.error('Cannot find Chart object.');
     return;
   }
 
-  if (typeof Object.assign != 'function') {
+  if (typeof Object.assign !== 'function') {
     Object.assign = function (target) {
-      if (target == null) {
+      if (!target) {
         throw new TypeError('Cannot convert undefined or null to object');
       }
       const to = Object(target);
       for (let index = 1; index < arguments.length; index++) {
         const nextSource = arguments[index];
-        if (nextSource != null) {
+        if (nextSource) {
           for (const nextKey in nextSource) {
             if (Object.prototype.hasOwnProperty.call(nextSource, nextKey)) {
               to[nextKey] = nextSource[nextKey];
@@ -55,10 +53,10 @@ import Chart, { helpers } from 'chart.js';
     this.options = Object.assign({
       position: 'default',
       precision: 0,
-      fontSize: chartOptions.font.size,
-      fontColor: chartOptions.color,
-      fontStyle: chartOptions.font.style,
-      fontFamily: chartOptions.font.family,
+      fontSize: chartOptions.font?.size || 12,
+      fontColor: chartOptions.color || '#333333',
+      fontStyle: chartOptions.font?.style || 'normal',
+      fontFamily: chartOptions.font?.family || '\'Helvetica Neue\', \'Helvetica\', \'Arial\', sans-serif',
       shadowOffsetX: 3,
       shadowOffsetY: 3,
       shadowColor: 'rgba(0,0,0,0.3)',
@@ -100,7 +98,7 @@ import Chart, { helpers } from 'chart.js';
     }
     const ctx = this.ctx;
     ctx.save();
-    ctx.font = helpers.fontString(this.options.fontSize, this.options.fontStyle, this.options.fontFamily);
+    ctx.font = Chart.helpers.fontString(this.options.fontSize, this.options.fontStyle, this.options.fontFamily);
     const renderInfo = this.getRenderInfo(element, label);
     if (!this.drawable(element, label, renderInfo)) {
       ctx.restore();
@@ -225,7 +223,7 @@ import Chart, { helpers } from 'chart.js';
     }
     if (typeof label === 'object') {
       label = this.loadImage(label);
-    } else if (label !== null && label !== undefined) {
+    } else if (label) {
       label = label.toString();
     }
     return label;
@@ -249,12 +247,12 @@ import Chart, { helpers } from 'chart.js';
   };
 
   Label.prototype.getPercentage = function (dataset, element, index) {
-    if (this.percentage !== null) {
+    if (this.percentage) {
       return this.percentage;
     }
     let percentage;
     if (this.chart.config.type === 'polarArea') {
-      if (this.total === null) {
+      if (!this.total) {
         this.total = 0;
         for (let i = 0; i < dataset.data.length; ++i) {
           this.total += dataset.data[i];
@@ -262,7 +260,7 @@ import Chart, { helpers } from 'chart.js';
       }
       percentage = dataset.data[index] / this.total * 100;
     } else if (this.chart.config.type === 'bar') {
-      if (this.barTotal[index] === undefined) {
+      if (!this.barTotal[index]) {
         this.barTotal[index] = 0;
         for (let i = 0; i < this.chart.data.datasets.length; ++i) {
           this.barTotal[index] += this.chart.data.datasets[i].data[index];
