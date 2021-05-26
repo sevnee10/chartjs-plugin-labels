@@ -192,7 +192,7 @@ import Chart, { helpers } from 'chart.js';
   Label.prototype.shouldRenderToElement = function (meta, element) {
     return !meta.hidden && !element.hidden && (
       this.options.showZero ||
-        this.chart.config.type === 'polarArea' ? element._view.outerRadius !== 0 : element._view.circumference !== 0
+        this.chart.config.type === 'polarArea' ? element.outerRadius !== 0 : element.circumference !== 0
     );
   };
 
@@ -270,7 +270,7 @@ import Chart, { helpers } from 'chart.js';
       }
       percentage = dataset.data[index] / this.barTotal[index] * 100;
     } else {
-      percentage = element._view.circumference / this.chart.config.options.circumference * 100;
+      percentage = element.circumference / this.chart.config.options.circumference * 100;
     }
     percentage = parseFloat(percentage.toFixed(this.options.precision));
     if (!this.options.showActualPercentages) {
@@ -302,7 +302,7 @@ import Chart, { helpers } from 'chart.js';
     if (this.options.position === 'outside' || this.options.position === 'border') {
       let renderInfo = {};
       let rangeFromCentre;
-      const view = element._view;
+      const view = element;
       const centreAngle = view.startAngle + (view.endAngle - view.startAngle) / 2;
       const innerRadius = view.outerRadius / 2;
       if (this.options.position === 'border') {
@@ -326,7 +326,7 @@ import Chart, { helpers } from 'chart.js';
 
   Label.prototype.getArcRenderInfo = function (element, label) {
     let radius;
-    const view = element._view;
+    const view = element;
     if (this.options.position === 'outside') {
       radius = view.outerRadius + this.options.fontSize + this.options.textMargin;
     } else if (this.options.position === 'border') {
