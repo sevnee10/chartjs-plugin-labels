@@ -1,12 +1,12 @@
 # Change Log
 
-## v1.2.0 / 2021-05-26
+## v3.0.0 / 2021-05-26
 ### Added
-- WIP: add support for Chart.js v3
+- Add support for Chart.js v3
 
 ### Refactoring
-- Replace var with const or let
-- Autofix code using ESLint
+- Add ESLint to dev dependencies to autofix code
+- Add rollup to dev dependencies to generate bundle
 
 ## v1.1.0 / 2018-09-24
 ### Added
