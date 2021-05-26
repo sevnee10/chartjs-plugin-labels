@@ -1,9 +1,10 @@
 {
-  "name": "chartjs-plugin-labels",
+  "name": "chartjs-plugin-labels-new",
   "version": "3.0.0",
   "description": "Chart.js plugin to display labels on pie, doughnut and polar area chart.",
   "main": "src/chartjs-plugin-labels.js",
   "scripts": {
+    "build": "rollup -c",
     "lint": "eslint ./"
   },
   "peerDependencies": {
@@ -26,6 +27,8 @@
     "url": "https://github.com/DavideViolante/chartjs-plugin-labels/issues"
   },
   "devDependencies": {
-    "eslint": "^7.27.0"
+    "eslint": "^7.27.0",
+    "rollup": "^2.50.1",
+    "rollup-plugin-terser": "^7.0.2"
   }
 }
