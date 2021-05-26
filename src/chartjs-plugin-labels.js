@@ -251,7 +251,7 @@
       return this.percentage;
     }
     let percentage;
-    if (this.chart.config.type === 'polarArea') {
+    if (this.chart.config.type === 'polarArea' || this.chart.config.type === 'doughnut' || this.chart.config.type === 'pie') {
       if (!this.total) {
         this.total = 0;
         for (let i = 0; i < dataset.data.length; ++i) {
