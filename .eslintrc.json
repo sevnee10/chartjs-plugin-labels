@@ -9,7 +9,9 @@
         "sourceType": "module"
     },
     "rules": {
+        "eqeqeq": "error",
         "indent": ["error", 2, { "SwitchCase": 1 }],
+        "no-undef": "warn",
         "no-var": "error",
         "prefer-const": "error",
         "quotes": ["error", "single"],
