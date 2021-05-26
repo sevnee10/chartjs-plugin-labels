@@ -14,7 +14,7 @@ You can put the below link in the script tag
     https://cdn.jsdelivr.net/gh/DavideViolante/chartjs-plugin-labels/src/chartjs-plugin-labels.js
 
 ## Installation
-- `npm i chartjs-plugin-labels`
+- `npm i chartjs-plugin-labels-new`
 
 ## Usage
 JavaScript
