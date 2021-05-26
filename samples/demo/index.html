@@ -339,10 +339,10 @@
       createChart(type + '-canvas1', type, {
         responsive: true,
         maintainAspectRatio: false,
-        legend: {
-          display: false
-        },
         plugins: {
+          legend: {
+            display: false
+          },
           labels: {
             render: 'label'
           }
@@ -581,12 +581,12 @@
           }
         },
         scales: {
-          xAxes: [{
+          x: {
             stacked: true,
-          }],
-          yAxes: [{
+          },
+          y: {
             stacked: true
-          }]
+          }
         }
       }
     });
