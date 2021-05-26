@@ -1,17 +1,17 @@
-# chartjs-plugin-labels
-Chart.js plugin to display labels on pie, doughnut and polar area chart. Original Chart.PieceLabel.js
+# chartjs-plugin-labels v3
+[Chart.js](https://www.chartjs.org/) plugin to display labels on pie, doughnut and polar area chart. 
 
 ## Demo
-[Demo](http://emn178.github.io/chartjs-plugin-labels/samples/demo/)
+- [Demo](http://emn178.github.io/chartjs-plugin-labels/samples/demo/)
 
 ## Download
-[Compress](https://raw.github.com/emn178/chartjs-plugin-labels/master/build/chartjs-plugin-labels.min.js)  
-[Uncompress](https://raw.github.com/emn178/chartjs-plugin-labels/master/src/chartjs-plugin-labels.js)
+- [Compressed](https://raw.github.com/DavideViolante/chartjs-plugin-labels/master/build/chartjs-plugin-labels.min.js)  
+- [Uncompressed](https://raw.github.com/DavideViolante/chartjs-plugin-labels/master/src/chartjs-plugin-labels.js)
 
 ## CDN Link
 You can put the below link in the script tag
 
-    https://cdn.jsdelivr.net/gh/emn178/chartjs-plugin-labels/src/chartjs-plugin-labels.js
+    https://cdn.jsdelivr.net/gh/DavideViolante/chartjs-plugin-labels/src/chartjs-plugin-labels.js
 
 ## Installation
 - `npm i chartjs-plugin-labels`
@@ -154,4 +154,4 @@ The project is released under the [MIT license](http://www.opensource.org/licens
 
 ## Contact
 The project's website is located at https://github.com/emn178/chartjs-plugin-labels  
-Author: Chen, Yi-Cyuan (emn178@gmail.com)
+Authors: Chen, Yi-Cyuan (emn178@gmail.com), Davide Violante
