@@ -16,11 +16,6 @@ You can put the below link in the script tag
 ## Installation
 - `npm i chartjs-plugin-labels`
 
-## Notice
-v1.0.0 has breaking changes. Please see [CHANGELOG v1.0.0](https://github.com/emn178/chartjs-plugin-labels/blob/master/CHANGELOG.md#v170--2018-08-19)  
-v0.7.0 has deprecated options. Please see [CHANGELOG v0.7.0](https://github.com/emn178/chartjs-plugin-labels/blob/master/CHANGELOG.md#v070--2017-08-03)  
-v0.4.0 has breaking changes. Please see [CHANGELOG v0.4.0](https://github.com/emn178/chartjs-plugin-labels/blob/master/CHANGELOG.md#v040--2017-05-26)
-
 ## Usage
 JavaScript
 ```JavaScript
