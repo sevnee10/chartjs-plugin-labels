@@ -1,5 +1,13 @@
 # Change Log
 
+## v1.2.0 / 2021-05-26
+### Added
+- WIP: add support for Chart.js v3
+
+### Refactoring
+- Replace var with const or let
+- Autofix code using ESLint
+
 ## v1.1.0 / 2018-09-24
 ### Added
 - bar suuport. #71
