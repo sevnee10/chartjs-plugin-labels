@@ -7,7 +7,7 @@
  * @license MIT
  */
 
-import Chart, { helpers, plugins } from 'chart.js';
+import Chart, { helpers } from 'chart.js';
 
 (function () {
   'use strict';
@@ -439,7 +439,7 @@ import Chart, { helpers, plugins } from 'chart.js';
     return image;
   };
 
-  plugins.register({
+  Chart.register({
     id: 'labels',
     beforeDatasetsUpdate: function (chart, options) {
       if (!SUPPORTED_TYPES[chart.config.type]) {
