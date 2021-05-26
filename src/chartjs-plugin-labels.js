@@ -55,10 +55,10 @@ import Chart, { helpers } from 'chart.js';
     this.options = Object.assign({
       position: 'default',
       precision: 0,
-      fontSize: chartOptions.defaultFontSize,
-      fontColor: chartOptions.defaultFontColor,
-      fontStyle: chartOptions.defaultFontStyle,
-      fontFamily: chartOptions.defaultFontFamily,
+      fontSize: chartOptions.font.size,
+      fontColor: chartOptions.color,
+      fontStyle: chartOptions.font.style,
+      fontFamily: chartOptions.font.family,
       shadowOffsetX: 3,
       shadowOffsetY: 3,
       shadowColor: 'rgba(0,0,0,0.3)',
@@ -243,7 +243,7 @@ import Chart, { helpers } from 'chart.js';
         index: index
       });
     } else if (typeof fontColor !== 'string') {
-      fontColor = fontColor[index] || this.chart.config.options.defaultFontColor;
+      fontColor = fontColor[index] || this.chart.config.options.color;
     }
     return fontColor;
   };
