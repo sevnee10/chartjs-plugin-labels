@@ -441,7 +441,7 @@ import Chart, { helpers } from 'chart.js';
 
   Chart.register({
     id: 'labels',
-    beforeDatasetsUpdate: function (chart, options) {
+    beforeDatasetsUpdate: function (chart, args, options) {
       if (!SUPPORTED_TYPES[chart.config.type]) {
         return;
       }
