@@ -53,10 +53,10 @@
     this.options = Object.assign({
       position: 'default',
       precision: 0,
-      fontSize: chartOptions.font?.size || 12,
+      fontSize: chartOptions.font ? chartOptions.font.size : 12,
       fontColor: chartOptions.color || '#333333',
-      fontStyle: chartOptions.font?.style || 'normal',
-      fontFamily: chartOptions.font?.family || '\'Helvetica Neue\', \'Helvetica\', \'Arial\', sans-serif',
+      fontStyle: chartOptions.font ? chartOptions.font.style : 'normal',
+      fontFamily: chartOptions.font ? chartOptions.font.family : '\'Helvetica Neue\', \'Helvetica\', \'Arial\', sans-serif',
       shadowOffsetX: 3,
       shadowOffsetY: 3,
       shadowColor: 'rgba(0,0,0,0.3)',
