@@ -1,6 +1,6 @@
 {
   "name": "chart.js-plugin-labels-dv",
-  "version": "3.0.3",
+  "version": "3.0.4",
   "description": "Chart.js plugin to display labels on pie, doughnut and polar area chart.",
   "main": "src/chartjs-plugin-labels.js",
   "scripts": {
