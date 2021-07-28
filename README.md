@@ -1,8 +1,8 @@
-# chart.js-plugin-labels for Chart.js v3
-[Chart.js](https://www.chartjs.org/) plugin to display labels on pie, doughnut and polar area chart. 
+# Chart.js Plugin Labels for Chart.js v3+
+[Chart.js](https://www.chartjs.org/) plugin to display labels on pie, doughnut and polar area chart. Forked from emn178/chartjs-plugin-labels.
 
 ## Demo
-- [Demo](http://emn178.github.io/chartjs-plugin-labels/samples/demo/)
+- [Demo](http://emn178.github.io/chartjs-plugin-labels/samples/demo/) from the original repo using Chart.js v2.x, but it's almost the same.
 
 ## Download
 - [Compressed](https://raw.github.com/DavideViolante/chartjs-plugin-labels/master/dist/chartjs-plugin-labels.min.js)  
@@ -142,17 +142,10 @@ Chart.defaults.global.plugins.labels = {
 };
 ```
 
-### Angular 2+
-```
-import Chart from 'chart.js/auto';
-import 'chart.js-plugin-labels-dv';
-```
-
-If you use [angular2-chartjs](https://github.com/emn178/angular2-chartjs), you can import by this:
-```
-import { ChartModule } from 'angular2-chartjs';
-import 'chart.js-plugin-labels-dv';
-```
+### Angular
+1. Install using `npm i chart.js-plugin-labels-dv`
+2. Edit `angular.json` and add inside the `"scripts"` array: `"node_modules/chart.js/dist/chart.min.js"`
+3. Inside the component where you want to use Chart.js: `import Chart from 'chart.js/auto';`
 
 ## License
 [MIT license](http://www.opensource.org/licenses/MIT).
