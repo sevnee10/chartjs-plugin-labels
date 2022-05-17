@@ -14,6 +14,7 @@
     console.error('Cannot find Chart object.');
     return;
   }
+  const helpers = Chart.helpers
 
   if (typeof Object.assign !== 'function') {
     Object.assign = function (target) {
@@ -98,7 +99,7 @@
     }
     const ctx = this.ctx;
     ctx.save();
-    ctx.font = Chart.helpers.fontString(this.options.fontSize, this.options.fontStyle, this.options.fontFamily);
+    ctx.font = helpers.fontString(this.options.fontSize, this.options.fontStyle, this.options.fontFamily);
     const renderInfo = this.getRenderInfo(element, label);
     if (!this.drawable(element, label, renderInfo)) {
       ctx.restore();
