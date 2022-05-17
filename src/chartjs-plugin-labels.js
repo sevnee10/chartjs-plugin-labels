@@ -14,7 +14,8 @@
     console.error('Cannot find Chart object.');
     return;
   }
-  const helpers = Chart.helpers
+
+  const helpers = Chart.helpers;
 
   if (typeof Object.assign !== 'function') {
     Object.assign = function (target) {
