@@ -1,7 +1,7 @@
 /**
  * [chartjs-plugin-labels]{@link https://github.com/DavideViolante/chartjs-plugin-labels}
  *
- * @version 3.0.0
+ * @version 3.0.7
  * @author Chen, Yi-Cyuan [emn178@gmail.com], Davide Violante
  * @copyright Chen, Yi-Cyuan 2017-2018
  * @license MIT
@@ -15,6 +15,7 @@
     return;
   }
 
+  // eslint-disable-next-line no-undef
   const helpers = Chart.helpers;
 
   if (typeof Object.assign !== 'function') {
@@ -439,6 +440,7 @@
     return image;
   };
 
+  // eslint-disable-next-line no-undef
   Chart.register({
     id: 'labels',
     beforeDatasetsUpdate: function (chart, args, options) {
