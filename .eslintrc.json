@@ -17,5 +17,5 @@
         "quotes": ["error", "single"],
         "semi": "error"
     },
-    "ignorePatterns": ["**/build/*"]
+    "ignorePatterns": ["**/dist/*"]
 }
