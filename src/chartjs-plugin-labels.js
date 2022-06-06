@@ -1,7 +1,7 @@
 /**
  * [chartjs-plugin-labels]{@link https://github.com/DavideViolante/chartjs-plugin-labels}
  *
- * @version 3.0.7
+ * @version 3.0.8
  * @author Chen, Yi-Cyuan [emn178@gmail.com], Davide Violante
  * @copyright Chen, Yi-Cyuan 2017-2018
  * @license MIT
@@ -204,8 +204,8 @@
         label: this.chart.config.data.labels[index],
         value: dataset.data[index],
         percentage: this.getPercentage(dataset, element, index),
-        dataset: dataset,
-        index: index
+        dataset,
+        index
       });
     } else {
       switch (this.options.render) {
@@ -240,8 +240,8 @@
         value: dataset.data[index],
         percentage: this.getPercentage(dataset, element, index),
         backgroundColor: dataset.backgroundColor[index],
-        dataset: dataset,
-        index: index
+        dataset,
+        index
       });
     } else if (typeof fontColor !== 'string') {
       fontColor = fontColor[index] || this.chart.config.options.color;
@@ -341,13 +341,7 @@
     endAngle += Math.PI / 2;
     const mertrics = this.measureLabel(label);
     startAngle += (endAngle - (mertrics.width / radius + startAngle)) / 2;
-    return {
-      radius: radius,
-      startAngle: startAngle,
-      endAngle: endAngle,
-      totalAngle: totalAngle,
-      view: view
-    };
+    return { radius, startAngle, endAngle, totalAngle, view };
   };
 
   Label.prototype.getBarRenderInfo = function (element, label) {
@@ -407,12 +401,7 @@
         }
       }
     }
-    labelBounds.push({
-      left: left,
-      right: right,
-      top: top,
-      bottom: bottom
-    });
+    labelBounds.push({ left, right, top, bottom });
     return true;
   };
 
@@ -428,7 +417,8 @@
           width = result.width;
         }
       }
-      return { width: width, height: this.options.fontSize * lines.length };
+      const height = this.options.fontSize * lines.length;
+      return { width, height };
     }
   };
 

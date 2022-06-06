@@ -13,6 +13,7 @@
         "indent": ["error", 2, { "SwitchCase": 1 }],
         "no-undef": "warn",
         "no-var": "error",
+        "object-shorthand": ["error", "properties"],
         "prefer-const": "error",
         "quotes": ["error", "single"],
         "semi": "error"
