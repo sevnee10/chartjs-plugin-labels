@@ -1,7 +1,7 @@
 /**
  * [chartjs-plugin-labels]{@link https://github.com/DavideViolante/chartjs-plugin-labels}
  *
- * @version 3.0.8
+ * @version 3.1.0
  * @author Chen, Yi-Cyuan [emn178@gmail.com], Davide Violante
  * @copyright Chen, Yi-Cyuan 2017-2018
  * @license MIT
