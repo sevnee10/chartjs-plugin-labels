@@ -437,7 +437,7 @@
       if (!SUPPORTED_TYPES[chart.config.type]) {
         return;
       }
-      if (!Array.isArray(options)) {
+      if (!options.length) {
         options = [options];
       }
       const count = options.length;
