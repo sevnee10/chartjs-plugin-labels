@@ -134,18 +134,16 @@ labels: [
 ]
 ```
 
-Global options
+Default options
 
 ```JavaScript
-Chart.defaults.global.plugins.labels = {
+Chart.defaults.plugins.labels = {
   // ...
 };
 ```
 
-### Angular
-1. Install using `npm i chart.js-plugin-labels-dv`
-2. Edit `angular.json` and add inside the `"scripts"` array: `"node_modules/chart.js/dist/chart.min.js"`
-3. Inside the component where you want to use Chart.js: `import Chart from 'chart.js/auto';`
+### Angular / React / Vue
+- We need your contribution! If you know how to make it work with these frameworks please open a PR editing this readme.
 
 ## License
 [MIT license](http://www.opensource.org/licenses/MIT).
