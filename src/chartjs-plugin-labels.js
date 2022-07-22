@@ -432,9 +432,9 @@
 
   function isPluginsLabelsDefined(options) {
     const chartConfig = options._context.chart.config._config;
-    if (!chartConfig.options || !chartConfig.options.plugins)
-      return false;
-    return !!chartConfig.options.plugins.labels;
+    if (chartConfig.options && chartConfig.options.plugins)
+      return !!chartConfig.options.plugins.labels;
+    return false;
   }
   // eslint-disable-next-line no-undef
   Chart.register({
