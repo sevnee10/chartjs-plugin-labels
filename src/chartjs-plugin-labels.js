@@ -2,7 +2,7 @@
  * [chartjs-plugin-labels]{@link https://github.com/DavideViolante/chartjs-plugin-labels}
  *
  * @version 3.1.0
- * @author Chen, Yi-Cyuan [emn178@gmail.com], Davide Violante
+ * @author Chen, Yi-Cyuan [emn178@gmail.com], Davide Violante, Yousef Altaher
  * @copyright Chen, Yi-Cyuan 2017-2018
  * @license MIT
  */
@@ -430,11 +430,14 @@
     return image;
   };
 
+  function isDefined(options){
+    return !!options._context.chart.config._config.options.plugins.labels;
+  }
   // eslint-disable-next-line no-undef
   Chart.register({
     id: 'labels',
     beforeDatasetsUpdate: function (chart, args, options) {
-      if (!SUPPORTED_TYPES[chart.config.type]) {
+      if (!SUPPORTED_TYPES[chart.config.type] || !isDefined(options)) {
         return;
       }
       if (!options.length) {
@@ -463,24 +466,24 @@
         chart.chartArea.bottom -= maxPadding;
       }
     },
-    afterDatasetUpdate: function (chart, args) {
-      if (!SUPPORTED_TYPES[chart.config.type]) {
+    afterDatasetUpdate: function (chart, args, options) {
+      if (!SUPPORTED_TYPES[chart.config.type] || !isDefined(options)) {
         return;
       }
       chart._labels.forEach(function (label) {
         label.args[args.index] = args;
       });
     },
-    beforeDraw: function (chart) {
-      if (!SUPPORTED_TYPES[chart.config.type]) {
+    beforeDraw: function (chart, args, options) {
+      if (!SUPPORTED_TYPES[chart.config.type] || !isDefined(options)) {
         return;
       }
       chart._labels.forEach(function (label) {
         label.barTotalPercentage = {};
       });
     },
-    afterDatasetsDraw: function (chart) {
-      if (!SUPPORTED_TYPES[chart.config.type]) {
+    afterDatasetsDraw: function (chart, args, options) {
+      if (!SUPPORTED_TYPES[chart.config.type] || !isDefined(options)) {
         return;
       }
       chart._labels.forEach(function (label) {
