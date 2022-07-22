@@ -430,14 +430,14 @@
     return image;
   };
 
-  function isDefined(options){
+  function isPluginsLabelsDefined(options) {
     return !!options._context.chart.config._config.options.plugins.labels;
   }
   // eslint-disable-next-line no-undef
   Chart.register({
     id: 'labels',
     beforeDatasetsUpdate: function (chart, args, options) {
-      if (!SUPPORTED_TYPES[chart.config.type] || !isDefined(options)) {
+      if (!SUPPORTED_TYPES[chart.config.type] || !isPluginsLabelsDefined(options)) {
         return;
       }
       if (!options.length) {
@@ -467,7 +467,7 @@
       }
     },
     afterDatasetUpdate: function (chart, args, options) {
-      if (!SUPPORTED_TYPES[chart.config.type] || !isDefined(options)) {
+      if (!SUPPORTED_TYPES[chart.config.type] || !isPluginsLabelsDefined(options)) {
         return;
       }
       chart._labels.forEach(function (label) {
@@ -475,7 +475,7 @@
       });
     },
     beforeDraw: function (chart, args, options) {
-      if (!SUPPORTED_TYPES[chart.config.type] || !isDefined(options)) {
+      if (!SUPPORTED_TYPES[chart.config.type] || !isPluginsLabelsDefined(options)) {
         return;
       }
       chart._labels.forEach(function (label) {
@@ -483,7 +483,7 @@
       });
     },
     afterDatasetsDraw: function (chart, args, options) {
-      if (!SUPPORTED_TYPES[chart.config.type] || !isDefined(options)) {
+      if (!SUPPORTED_TYPES[chart.config.type] || !isPluginsLabelsDefined(options)) {
         return;
       }
       chart._labels.forEach(function (label) {
