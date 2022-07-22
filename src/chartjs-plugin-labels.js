@@ -431,7 +431,10 @@
   };
 
   function isPluginsLabelsDefined(options) {
-    return !!options._context.chart.config._config.options.plugins.labels;
+    const chartConfig = options._context.chart.config._config;
+    if (!chartConfig.options || !chartConfig.options.plugins)
+      return false;
+    return !!chartConfig.options.plugins.labels;
   }
   // eslint-disable-next-line no-undef
   Chart.register({
