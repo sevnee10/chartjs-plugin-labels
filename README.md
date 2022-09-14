@@ -142,8 +142,26 @@ Chart.defaults.plugins.labels = {
 };
 ```
 
-### Angular / React / Vue
-- We need your contribution! If you know how to make it work with these frameworks please open a PR editing this readme.
+### React
+From https://github.com/DavideViolante/chartjs-plugin-labels/issues/5#issuecomment-1237995604
+```ts
+import React from 'react';
+import { Chart } from 'chart.js';
+import * as helpers from 'chart.js/helpers';
+
+export const LabelPluginProvider: React.FC = ({ children }) => {
+  React.useEffect(() => {
+    window.Chart = Chart;
+    Chart.helpers = helpers;
+    import('chart.js-plugin-labels-dv');
+  }, []);
+  return children;
+};
+```
+
+### Angular / Vue
+We need your contribution! If you know how to make it work with these frameworks please open a PR editing this readme.
+
 
 ## License
 [MIT license](http://www.opensource.org/licenses/MIT).
