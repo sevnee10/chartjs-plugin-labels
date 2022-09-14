@@ -467,7 +467,7 @@
       if (!SUPPORTED_TYPES[chart.config.type]) {
         return;
       }
-      chart._labels.forEach(function (label) {
+      chart._labels?.forEach(function (label) {
         label.args[args.index] = args;
       });
     },
@@ -475,7 +475,7 @@
       if (!SUPPORTED_TYPES[chart.config.type]) {
         return;
       }
-      chart._labels.forEach(function (label) {
+      chart._labels?.forEach(function (label) {
         label.barTotalPercentage = {};
       });
     },
@@ -483,7 +483,7 @@
       if (!SUPPORTED_TYPES[chart.config.type]) {
         return;
       }
-      chart._labels.forEach(function (label) {
+      chart._labels?.forEach(function (label) {
         label.render();
       });
     }
