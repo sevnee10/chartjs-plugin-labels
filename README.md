@@ -1,5 +1,9 @@
-# Chart.js Plugin Labels for Chart.js v3+
-[Chart.js](https://www.chartjs.org/) plugin to display labels on pie, doughnut and polar area chart. Forked from emn178/chartjs-plugin-labels.
+[![Maintainability](https://api.codeclimate.com/v1/badges/ded2c349739e4d87130b/maintainability)](https://codeclimate.com/github/DavideViolante/chart.js-plugin-labels-dv/maintainability) ![npm](https://img.shields.io/npm/dm/chart.js-plugin-labels-dv) [![Donate](https://img.shields.io/badge/paypal-donate-179BD7.svg)](https://www.paypal.me/dviolante)
+
+[![NPM](https://nodei.co/npm/chart.js-plugin-labels-dv.png)](https://nodei.co/npm/chart.js-plugin-labels-dv/)
+
+# Chart.js Plugin Labels for Chart.js v4+
+[Chart.js](https://www.chartjs.org/) plugin to display labels on pie, doughnut and polar area chart. Forked from [emn178/chartjs-plugin-labels](https://github.com/emn178/chartjs-plugin-labels).
 
 ## Demo
 - [Demo](http://emn178.github.io/chartjs-plugin-labels/samples/demo/) from the original repo using Chart.js v2.x, but it's almost the same.
@@ -13,7 +17,7 @@ You can put the below link in the script tag
 
     https://unpkg.com/chart.js-plugin-labels-dv/dist/chartjs-plugin-labels.min.js
 
-## Installation
+## Install from NPM
 - `npm i chart.js-plugin-labels-dv`
 
 ## Usage
