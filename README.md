@@ -163,9 +163,23 @@ export const LabelPluginProvider: React.FC = ({ children }) => {
 };
 ```
 
-### Angular / Vue
-We need your contribution! If you know how to make it work with these frameworks please open a PR editing this readme.
+### Vue
+From https://github.com/DavideViolante/chartjs-plugin-labels/issues/2#issuecomment-1483948596
+```ts
+import Chart from "chart.js/auto";
+import * as helpers from "chart.js/helpers";
+```
+Then inside the `created()` hook:
+```ts
+async created() {
+  window.Chart = Chart;
+  Chart.helpers = helpers;
+  awaitimport("chart.js-plugin-labels-dv");
+}
+```
 
+### Angular
+We need your contribution! If you know how to make it work please open a PR editing this readme.
 
 ## License
 [MIT license](http://www.opensource.org/licenses/MIT).
