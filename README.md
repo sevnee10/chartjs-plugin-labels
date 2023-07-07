@@ -179,7 +179,67 @@ async created() {
 ```
 
 ### Angular
-We need your contribution! If you know how to make it work please open a PR editing this readme.
+You would need to create your own chart component.
+
+`html`
+```
+<div class="chart">
+  <canvas [id]="name"></canvas>
+</div>
+```
+
+`ts`
+
+Importing should be straightforward
+```
+import Chart from 'chart.js/auto';
+import { getChartLabelPlugin, PLUGIN_ID } from 'chart.js-plugin-labels-dv';
+```
+
+```
+@Input() chartConfig: any;
+@Output() chartCreated: EventEmitter<Chart> = new EventEmitter<Chart>();
+
+public readonly name: string = `chart-${ChartComponent.instanceCount++}`;
+private chart: Chart;
+
+ngAfterViewInit(): void {
+  this.createChart();
+}
+
+private createChart(): void {
+  if (!this.hasRegisteredPlugin()) {
+    Chart.register(getChartLabelPlugin());
+  }
+    
+  this.chart = new Chart(this.name, this.chartConfig);
+  this.chartCreated.emit(this.chart);
+}
+
+private hasRegisteredPlugin(): boolean {
+    return !!Chart.registry?.plugins.get(PLUGIN_ID);
+}
+```
+
+For fixing the module failed compilation error I have updated tsconfig as follows:
+
+`Error`
+
+```
+Error: Module build failed (from ./node_modules/@ngtools/webpack/src/ivy/index.js):
+Error: /node_modules/chart.js-plugin-labels-dv/src/chart-label.ts is missing from the TypeScript compilation.
+Please make sure it is in your tsconfig via the 'files' or 'include' property.
+```
+
+tsconfig.json
+```
+"files": [
+  ...
+  "node_modules/chart.js-plugin-labels-ed/src/chart-label.ts"
+],
+```
+
+Test it out with data from the official Chart.js website: https://www.chartjs.org/docs/latest/charts/doughnut.html#pie
 
 ## License
 [MIT license](http://www.opensource.org/licenses/MIT).
