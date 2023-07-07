@@ -96,7 +96,7 @@ var ChartLabel = (function () {
             fontStyle: chartOptions.font ? chartOptions.font.style : 'normal',
             fontFamily: chartOptions.font
                 ? chartOptions.font.family
-                : "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
+                : '\'Helvetica Neue\', \'Helvetica\', \'Arial\', sans-serif',
             shadowOffsetX: 3,
             shadowOffsetY: 3,
             shadowColor: 'rgba(0,0,0,0.3)',
@@ -351,7 +351,6 @@ var ChartLabel = (function () {
     ChartLabel.prototype.getBaseRenderInfo = function (element, label) {
         if (this.options.position === LabelPosition.OUTSIDE ||
             this.options.position === LabelPosition.BORDER) {
-            var renderInfo = {};
             var rangeFromCentre = void 0;
             var view = element;
             var centreAngle = view.startAngle + (view.endAngle - view.startAngle) / 2;
@@ -366,7 +365,7 @@ var ChartLabel = (function () {
                         innerRadius +
                         this.options.textMargin;
             }
-            renderInfo = {
+            var renderInfo = {
                 x: view.x + Math.cos(centreAngle) * rangeFromCentre,
                 y: view.y + Math.sin(centreAngle) * rangeFromCentre
             };

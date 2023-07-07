@@ -1,5 +1,5 @@
 import Chart, { ChartComponentLike } from 'chart.js/auto';
-export declare const PLUGIN_ID: string;
+export declare const PLUGIN_ID = "labels";
 export declare const getChartLabelPlugin: () => ChartComponentLike;
 export declare class ChartLabel {
     chart: Chart;
@@ -12,7 +12,6 @@ export declare class ChartLabel {
     barTotal: any;
     options: any;
     labelBounds: any;
-    constructor();
     setup(chart: Chart, options: any): void;
     private render;
     private renderToDataset;
