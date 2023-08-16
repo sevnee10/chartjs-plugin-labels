@@ -1,5 +1,11 @@
 # Change Log
 
+## v5.0.1-beta / 2023-07-03
+- Fix main in package.json
+- Update deps
+- Add tsc build into build script
+- Correct version on JS version
+
 ## v5.0.0-beta / 2023-07-03
 ### Added
 - Angular support with usage example
