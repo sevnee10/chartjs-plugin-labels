@@ -145,7 +145,13 @@ export const LabelPluginProvider: React.FC = ({ children }) => {
 ```
 
 ### Vue
-From https://github.com/DavideViolante/chartjs-plugin-labels/issues/2#issuecomment-1483948596
+From https://github.com/DavideViolante/chartjs-plugin-labels/issues/2#issuecomment-1711298993
+```ts
+import { Chart as ChartJS } from 'chart.js'
+import { getChartLabelPlugin } from 'chart.js-plugin-labels-dv'
+ChartJS.register(getChartLabelPlugin())
+```
+Or, from https://github.com/DavideViolante/chartjs-plugin-labels/issues/2#issuecomment-1483948596
 ```ts
 import Chart from "chart.js/auto";
 import * as helpers from "chart.js/helpers";
@@ -158,7 +164,6 @@ async created() {
   awaitimport("chart.js-plugin-labels-dv");
 }
 ```
-
 ### Angular
 [Codesandbox example](https://codesandbox.io/p/sandbox/chart-js-plugin-demo-fmtvxd)
 
