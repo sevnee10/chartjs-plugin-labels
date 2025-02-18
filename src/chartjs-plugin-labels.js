@@ -216,7 +216,7 @@
           label = this.chart.config.data.labels[index];
           break;
         case 'image':
-          label = this.options.images[index] ? this.loadImage(this.options.images[index]) : '';
+          label = dataset.isDisplayImage && this.options.images[index] ? this.loadImage(this.options.images[index]) : '';
           break;
         case 'percentage':
         default:
