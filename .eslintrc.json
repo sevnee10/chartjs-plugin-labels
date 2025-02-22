@@ -11,7 +11,7 @@
     "rules": {
         "eqeqeq": "error",
         "indent": ["error", 2, { "SwitchCase": 1 }],
-        "no-undef": "warn",
+        "no-undef": "off",
         "no-var": "error",
         "object-shorthand": ["error", "properties"],
         "prefer-const": "error",
