@@ -1,7 +1,6 @@
 {
     "env": {
-        "browser": true,
-        "es2021": true
+        "browser": true
     },
     "extends": "eslint:recommended",
     "parserOptions": {
@@ -18,5 +17,10 @@
         "quotes": ["error", "single"],
         "semi": "error"
     },
-    "ignorePatterns": ["**/dist/*"]
+    "overrides": [
+        {
+            "files": ["**/dist/*"],
+            "excludedFiles": "**/*.js"
+        }
+    ]
 }
